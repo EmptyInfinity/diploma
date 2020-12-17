@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+h1 {
+  padding: 20px 0;
+}
+
+.App {
+  letter-spacing: 0.8px;
+  background-color: #282c34;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  /* font-size: 18px; */
+  font-size: calc(10px + 0.6vmin);
+  min-height: 100vh;
+}
+
+.Container {
+  width: 80%;
+  max-width: 1140px;
+  margin: auto;
+}
+.Container.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+.Items {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px;
+  transition: 3s;
+  flex-grow: 1;
+  align-content: flex-start;
+}
+.Item {
+  display: flex;
+  width: 50%;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+}
+.Question {
+  border: 2px solid #61dafb;
+  padding: 12px 15px;
+  border-radius: 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.Answers {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.Label {
+  padding-bottom: 15px;
+}
+.Navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.Button {
+  background-color: #000000b3;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.8px;
+}
+.Button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.Pages {
+  display: flex;
+  align-items: center;
+}
+.Page {
+  background-color: #000000b3;
+  padding: 8px;
+  cursor: pointer;
+  /* margin-right: 1px; */
+  min-width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* transition: .2s; */
+}
+.Page:last-child {
+  border-right: none;
+}
+.Page.current {
+  width: 40px;
+  height: 40px;
+}
+.Range {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 8px;
+}
+.Range .Labels {
+  margin: 0 -5px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 3px;
+}
+.Range .Labels span {
+  padding: 0 5px;
+  max-width: 50%;
+}

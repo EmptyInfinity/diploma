@@ -147,7 +147,7 @@ const data = {
 	labels,
 	datasets: [
 		{
-			label: "Тип информационного метаболизма",
+			label: "ТИМ",
 			backgroundColor: "rgb(76,192,192,.2)",
 			borderColor: "rgb(76,192,192)",
 			pointBackgroundColor: "rgb(76,192,192)",

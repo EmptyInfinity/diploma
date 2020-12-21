@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	user-select: none;
+}
+*,
+:after,
+:before {
+	box-sizing: border-box;
+}
+
+.justify-center {
+	justify-content: center !important;
+}
+
+h1 {
+	padding: 20px 0;
+}
+
+.dark-font {
+	color: rgb(6, 6, 6);
+}
+
+.App {
+	letter-spacing: 0.8px;
+	background-color: #282c34;
+	background: linear-gradient(#282c34, rgb(30, 30, 30));
+	/* background: linear-gradient(rgb(50, 50, 50), rgb(6, 6, 6)); */
+	color: white;
+	font-family: "Roboto", sans-serif;
+	/* font-size: 18px; */
+	font-size: calc(10px + 0.6vmin);
+	min-height: 100vh;
+}
+
+.Container {
+	width: 80%;
+	max-width: 1140px;
+	margin: auto;
+}
+.main {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 100vh;
+}
+.Items {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -10px;
+	margin-right: -10px;
+	flex-grow: 1;
+	align-content: flex-start;
+}
+.Item {
+	display: flex;
+	width: 50%;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 10px;
+}
+.Question {
+	border: 1px solid #a2a2a238;
+	padding: 12px 15px;
+	border-radius: 15px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	/* border: 1px solid #45715d; */
+	/*padding: 12px 15px;
+	border-radius: 15px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between; */
+}
+.Answers {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+.Label {
+	padding-bottom: 15px;
+}
+.Navigation {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 0;
+}
+.Button {
+	background-color: #000000b3;
+	font-size: 14px;
+	font-family: "Roboto", sans-serif;
+	color: #fff;
+	padding: 8px 15px;
+	border-radius: 5px;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	letter-spacing: 0.8px;
+	flex: 1;
+	max-width: 200px;
+}
+.Button:disabled {
+	opacity: 0.5;
+	cursor: default;
+}
+.Pages {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: 1;
+}
+.Page {
+	background-color: #000000b3;
+	padding: 8px;
+	cursor: pointer;
+	/* margin-right: 1px; */
+	min-width: 30px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* transition: .2s; */
+}
+.Page:last-child {
+	border-right: none;
+}
+.Page.current {
+	width: 40px;
+	height: 40px;
+}
+.Range {
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 8px;
+}
+.Range input {
+	height: 5px;
+	width: 200%;
+	margin-left: -50%;
+	/* position: absolute; */
+	transform: scale(0.5);
+	/* width: 150%; */
+	/* left: -25%; */
+	cursor: pointer;
+	opacity: 0.8;
+}
+.Range .wrap {
+	width: 100%;
+	position: relative;
+}
+.Range .Labels {
+	margin: 0 -5px;
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 3px;
+}
+.Range .Labels span {
+	padding: 0 5px;
+	max-width: 50%;
+}
+
+.Charts {
+	/* display: flex; */
+	flex: 1;
+}
+
+.RadarComponent {
+	max-width: 800px;
+	margin: 0 auto 30px;
+}
+.Description {
+	padding-top: 45px;
+	text-align: center;
+	color: #000;
+	font-weight: 600;
+	font-size: 18px;
+}

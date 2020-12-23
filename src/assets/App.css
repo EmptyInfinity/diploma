@@ -142,14 +142,10 @@ h1 {
 .Range input {
 	height: 3px;
 	width: 100%;
-	/* width: 200%; */
-	/* margin-left: -50%; */
-	/* position: absolute; */
-	/* transform: scale(0.5); */
-	/* width: 150%; */
-	/* left: -25%; */
 	cursor: pointer;
 	opacity: 0.8;
+	border-top: 5px solid #24282c;
+	border-bottom: 5px solid #24282c;
 }
 .Range .wrap {
 	width: 100%;
@@ -159,7 +155,6 @@ h1 {
 	margin: 0 -5px;
 	display: flex;
 	justify-content: space-between;
-	padding-bottom: 3px;
 }
 .Range .Labels span {
 	padding: 0 5px;

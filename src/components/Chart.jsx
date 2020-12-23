@@ -54,13 +54,13 @@ const radarOptions = {
 
 const ChartComponent = ({ blocks }) => {
 	const getBlockRes = (block) => {
-		let firstVal = 0;
+		let total = 0;
 		block.forEach(({ value = 50 }) => {
-			firstVal += +value;
+			total += 100 - value;
 		});
-		return [firstVal, 1000 - firstVal];
-	};
 
+		return [total, 1000 - total];
+	};
 	const firstBlockRes = getBlockRes(blocks[0]);
 	const secondBlockRes = getBlockRes(blocks[1]);
 	const thirdBlockRes = getBlockRes(blocks[2]);
@@ -68,7 +68,13 @@ const ChartComponent = ({ blocks }) => {
 		Math.abs(secondBlockRes[1] - secondBlockRes[0]),
 		Math.abs(thirdBlockRes[0] - thirdBlockRes[1]),
 	];
-	console.log(thirthBlock);
+	// console.log(
+	// 	...firstBlockRes,
+	// 	...secondBlockRes,
+	// 	...thirdBlockRes,
+	// 	...thirthBlock
+	// );
+
 	data.datasets[0].data = [
 		...firstBlockRes,
 		...secondBlockRes,

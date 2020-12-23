@@ -160,11 +160,12 @@ const data = {
 
 const ChartComponent2 = ({ blocks }) => {
 	const getBlockRes = (block) => {
-		let firstVal = 0;
+		let total = 0;
 		block.forEach(({ value = 50 }) => {
-			firstVal += +value;
+			total += 100 - value;
 		});
-		return [firstVal, 1000 - firstVal];
+
+		return [total, 1000 - total];
 	};
 
 	const firstBlockRes = getBlockRes(blocks[0]);
@@ -175,14 +176,15 @@ const ChartComponent2 = ({ blocks }) => {
 	const sec = secondBlockRes[0] > secondBlockRes[1] ? "L" : "E";
 	const thd = thirdBlockRes[0] > thirdBlockRes[1] ? "S" : "I";
 
-	// const datas = [
-	// 	{ t: "extrovert", v: firstBlockRes[0] },
-	// 	{ t: "introverr", v: firstBlockRes[1] },
-	// 	{ t: "logic", v: secondBlockRes[0] },
-	// 	{ t: "ethics", v: secondBlockRes[1] },
-	// 	{ t: "sensorics", v: thirdBlockRes[0] },
-	// 	{ t: "intuition", v: thirdBlockRes[1] },
-	// ];
+	const datas = [
+		{ t: "extrovert", v: firstBlockRes[0] },
+		{ t: "introverr", v: firstBlockRes[1] },
+		{ t: "logic", v: secondBlockRes[0] },
+		{ t: "ethics", v: secondBlockRes[1] },
+		{ t: "sensorics", v: thirdBlockRes[0] },
+		{ t: "intuition", v: thirdBlockRes[1] },
+	];
+	console.log(datas);
 	let type = "";
 	if (sec === "L") {
 		if (thd === "S") {
@@ -241,7 +243,6 @@ const ChartComponent2 = ({ blocks }) => {
 
 	groupsList.forEach((gr) => {
 		const grIndex = groups.findIndex((g) => g.type === gr.type);
-		console.log(grIndex);
 		groups[grIndex].value = 1 - (gr.range - 1) / 16;
 	});
 
